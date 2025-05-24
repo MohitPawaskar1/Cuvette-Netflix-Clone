@@ -1,0 +1,118 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #141414 0%, #000 100%);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    color: #e50914; /* Netflix red */
+}
+
+/* Main container grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card styling */
+.card {
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(229, 9, 20, 0.7);
+}
+
+/* Image styles */
+.card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-bottom: 3px solid #e50914;
+    transition: filter 0.3s ease;
+}
+
+.card:hover img {
+    filter: brightness(0.8);
+}
+
+/* Card info */
+.card-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Movie title */
+.card-info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Play button */
+.btn {
+    display: inline-block;
+    background-color: #e50914;
+    color: #fff;
+    text-align: center;
+    padding: 8px 14px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #b00610;
+    text-decoration: none;
+}
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .card img {
+        height: 220px;
+    }
+}

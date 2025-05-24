@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+    <header>
+        <h1>Netflix Clone 🎬</h1>
+    </header>
+
+    <main class="container">
+        {% for movie in movies %}
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/' + movie.image) }}" alt="{{ movie.title }}" />
+                <div class="card-info">
+                    <h3>{{ movie.title }}</h3>
+                    <a href="{{ movie.trailer }}" target="_blank" class="btn">▶ Play Trailer</a>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+</body>
+</html>
