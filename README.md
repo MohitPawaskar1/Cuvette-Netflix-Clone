@@ -6,7 +6,7 @@
 ---
 
 ## 🎓 Certificate of Completion  
-![Certificate](images/Mohit Pawaskar - Cuvette Certificate.jpg)  
+![Certificate](Certificate/Mohit Pawaskar - Cuvette Certificate.jpg)  
 
 ---
 
